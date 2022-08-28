@@ -13,6 +13,7 @@
 		E8A9D8CC28BB64BF00ADD016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CA28BB64BF00ADD016 /* Main.storyboard */; };
 		E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CD28BB64C300ADD016 /* Assets.xcassets */; };
 		E8A9D8D128BB64C300ADD016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CF28BB64C300ADD016 /* LaunchScreen.storyboard */; };
+		E8A9D8E028BB736000ADD016 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E8A9D8CD28BB64C300ADD016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8A9D8D028BB64C300ADD016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A9D8D228BB64C300ADD016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FirebaseApp/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
+		E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		E8A9D8C328BB64BF00ADD016 /* FirebaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */,
 				E8A9D8DA28BB668D00ADD016 /* Application */,
 				E8A9D8D928BB668700ADD016 /* Scenes */,
 				E8A9D8D828BB668500ADD016 /* Resources */,
@@ -76,8 +79,7 @@
 		E8A9D8D928BB668700ADD016 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E8A9D8C828BB64BF00ADD016 /* MainViewController.swift */,
-				E8A9D8CA28BB64BF00ADD016 /* Main.storyboard */,
+				E8A9D8E128BB737600ADD016 /* Main */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -89,6 +91,15 @@
 				E8A9D8C628BB64BF00ADD016 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		E8A9D8E128BB737600ADD016 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E8A9D8C828BB64BF00ADD016 /* MainViewController.swift */,
+				E8A9D8CA28BB64BF00ADD016 /* Main.storyboard */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A9D8D128BB64C300ADD016 /* LaunchScreen.storyboard in Resources */,
+				E8A9D8E028BB736000ADD016 /* GoogleService-Info.plist in Resources */,
 				E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */,
 				E8A9D8CC28BB64BF00ADD016 /* Main.storyboard in Resources */,
 			);
