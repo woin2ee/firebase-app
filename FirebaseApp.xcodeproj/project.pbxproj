@@ -15,6 +15,7 @@
 		E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CD28BB64C300ADD016 /* Assets.xcassets */; };
 		E8A9D8D128BB64C300ADD016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CF28BB64C300ADD016 /* LaunchScreen.storyboard */; };
 		E8A9D8E028BB736000ADD016 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */; };
+		E8FF6E5D28BCEF4B0071DB37 /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		E8A9D8D028BB64C300ADD016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A9D8D228BB64C300ADD016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FirebaseApp/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8FF6E5A28BCE40E0071DB37 /* FirebaseApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseApp.entitlements; sourceTree = "<group>"; };
+		E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		F3B01CBFB589C0BF6350F907 /* Pods-FirebaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseApp.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F53535E0F393CA40B287634C /* Pods_FirebaseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,7 +53,6 @@
 				F3B01CBFB589C0BF6350F907 /* Pods-FirebaseApp.debug.xcconfig */,
 				4232953D126D8E5918AECE2D /* Pods-FirebaseApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,10 +85,12 @@
 		E8A9D8C328BB64BF00ADD016 /* FirebaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */,
 				E8A9D8DA28BB668D00ADD016 /* Application */,
-				E8A9D8D928BB668700ADD016 /* Scenes */,
+				E8FF6E5A28BCE40E0071DB37 /* FirebaseApp.entitlements */,
+				E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */,
 				E8A9D8D828BB668500ADD016 /* Resources */,
+				E8A9D8D928BB668700ADD016 /* Scenes */,
+				E8FF6E5B28BCEF3C0071DB37 /* Utils */,
 			);
 			path = FirebaseApp;
 			sourceTree = "<group>";
@@ -125,6 +129,14 @@
 				E8A9D8CA28BB64BF00ADD016 /* Main.storyboard */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		E8FF6E5B28BCEF3C0071DB37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +258,7 @@
 				E8A9D8C928BB64BF00ADD016 /* MainViewController.swift in Sources */,
 				E8A9D8C528BB64BF00ADD016 /* AppDelegate.swift in Sources */,
 				E8A9D8C728BB64BF00ADD016 /* SceneDelegate.swift in Sources */,
+				E8FF6E5D28BCEF4B0071DB37 /* Logger+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebaseApp/FirebaseApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2AVC8X7323;
@@ -421,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebaseApp/FirebaseApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2AVC8X7323;
