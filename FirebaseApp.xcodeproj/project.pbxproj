@@ -85,9 +85,9 @@
 		E8A9D8C328BB64BF00ADD016 /* FirebaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				E8A9D8DA28BB668D00ADD016 /* Application */,
 				E8FF6E5A28BCE40E0071DB37 /* FirebaseApp.entitlements */,
 				E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */,
+				E8A9D8DA28BB668D00ADD016 /* Application */,
 				E8A9D8D828BB668500ADD016 /* Resources */,
 				E8A9D8D928BB668700ADD016 /* Scenes */,
 				E8FF6E5B28BCEF3C0071DB37 /* Utils */,
