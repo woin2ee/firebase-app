@@ -11,4 +11,5 @@ extension Logger {
     static let subsystem = Bundle.main.bundleIdentifier!
     
     static let firebase = Logger.init(subsystem: subsystem, category: "Firebase")
+    static let authorization = Logger.init(subsystem: subsystem, category: "Authorization")
 }

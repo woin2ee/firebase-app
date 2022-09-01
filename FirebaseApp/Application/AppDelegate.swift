@@ -15,13 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        UIApplication.shared.registerForRemoteNotifications()
         self.requestNotificationAuthorization()
-        self.logFCMRegistrationToken()
         return true
-    }
-    
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        Messaging.messaging().apnsToken = deviceToken
     }
     
     // MARK: UISceneSession Lifecycle
@@ -47,20 +44,18 @@ private extension AppDelegate {
         UNUserNotificationCenter.current().requestAuthorization(
             options: [.alert, .sound, .badge],
             completionHandler: { didAllow, error in
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
+                Logger.authorization.notice("알림 허용 상태: \(didAllow)")
             }
         )
     }
+}
+
+// MARK: - Messaging Delegate
+
+extension AppDelegate: MessagingDelegate {
     
-    func logFCMRegistrationToken() {
-        Messaging.messaging().token { token, error in
-            if let error = error {
-                Logger.firebase.error("Error fetching FCM registration token: \(error.localizedDescription)")
-            } else if let token = token {
-                Logger.firebase.notice("FCM registration token: \(token)")
-            }
-        }
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        let token = String.init(describing: fcmToken)
+        Logger.firebase.notice("FCM registration token: \(token)")
     }
 }
