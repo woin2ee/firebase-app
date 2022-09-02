@@ -10,5 +10,6 @@ target 'FirebaseApp' do
   # Firebase
 	pod 'FirebaseAnalytics' # Google Analytics
 	pod 'FirebaseMessaging'
+	pod 'FirebaseDatabase' # Realtime Database
 
 end
