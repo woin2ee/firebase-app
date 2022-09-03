@@ -15,9 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        Messaging.messaging().delegate = self
-        UIApplication.shared.registerForRemoteNotifications()
-        self.requestNotificationAuthorization()
+        self.configureNotification()
         return true
     }
     
@@ -39,6 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Private Functions
 
 private extension AppDelegate {
+    
+    func configureNotification() {
+        Messaging.messaging().delegate = self
+        UIApplication.shared.registerForRemoteNotifications()
+        self.requestNotificationAuthorization()
+    }
     
     func requestNotificationAuthorization() {
         UNUserNotificationCenter.current().requestAuthorization(
