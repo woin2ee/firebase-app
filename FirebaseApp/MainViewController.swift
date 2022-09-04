@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func didTapAddDataButton(_ sender: UIButton) {
+        let url = "https://fir-app-c82de-default-rtdb.asia-southeast1.firebasedatabase.app"
+        let ref = Database.database(url: url).reference()
+        ref.child("users").setValue(["name": "James"])
+//        ref.child("users").child("name").setValue("Bob")
     }
 }
