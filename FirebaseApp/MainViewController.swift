@@ -10,6 +10,12 @@ import FirebaseDatabase
 
 final class MainViewController: UIViewController {
     
+    static func create() -> MainViewController {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let identifier = String.init(describing: Self.self)
+        return storyboard.instantiateViewController(withIdentifier: identifier) as! MainViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
