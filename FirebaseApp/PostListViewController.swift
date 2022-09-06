@@ -8,13 +8,7 @@
 import UIKit
 import FirebaseDatabase
 
-final class PostListViewController: UIViewController {
-    
-    static func create() -> PostListViewController {
-        let storyboard = UIStoryboard.init(name: "PostList", bundle: nil)
-        let identifier = String.init(describing: Self.self)
-        return storyboard.instantiateViewController(withIdentifier: identifier) as! PostListViewController
-    }
+final class PostListViewController: UIViewController, Instantiatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()

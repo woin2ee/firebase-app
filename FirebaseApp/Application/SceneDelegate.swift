@@ -18,9 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow.init(windowScene: windowScene)
         self.tabBarController = .init()
         
-        let postListVC = PostListViewController.create()
+        let postListVC = PostListViewController.instantiate(storyboardName: "PostList")
+        let postRegistrationVC = PostRegistrationViewController.instantiate(storyboardName: "PostRegistration")
         
-        self.tabBarController?.setViewControllers([postListVC], animated: false)
+        self.tabBarController?.setViewControllers([postListVC, postRegistrationVC], animated: false)
         
         self.window?.rootViewController = self.tabBarController
         self.window?.makeKeyAndVisible()

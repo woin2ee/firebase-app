@@ -15,6 +15,9 @@
 		E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CD28BB64C300ADD016 /* Assets.xcassets */; };
 		E8A9D8D128BB64C300ADD016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CF28BB64C300ADD016 /* LaunchScreen.storyboard */; };
 		E8A9D8E028BB736000ADD016 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */; };
+		E8EE63FC28C6ED600043678B /* PostRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EE63FB28C6ED600043678B /* PostRegistration.storyboard */; };
+		E8EE63FE28C6ED820043678B /* PostRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */; };
+		E8EE640128C6EE040043678B /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE640028C6EE040043678B /* Instantiatable.swift */; };
 		E8FF6E5D28BCEF4B0071DB37 /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		E8A9D8D028BB64C300ADD016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A9D8D228BB64C300ADD016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FirebaseApp/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8EE63FB28C6ED600043678B /* PostRegistration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostRegistration.storyboard; sourceTree = "<group>"; };
+		E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRegistrationViewController.swift; sourceTree = "<group>"; };
+		E8EE640028C6EE040043678B /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		E8FF6E5A28BCE40E0071DB37 /* FirebaseApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseApp.entitlements; sourceTree = "<group>"; };
 		E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		F3B01CBFB589C0BF6350F907 /* Pods-FirebaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseApp.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A9D8E128BB737600ADD016 /* Posts */,
+				E8EE63FF28C6EDA30043678B /* Utils */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -143,8 +150,18 @@
 		E8EE63FA28C6EC6B0043678B /* PostRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */,
+				E8EE63FB28C6ED600043678B /* PostRegistration.storyboard */,
 			);
 			name = PostRegistration;
+			sourceTree = "<group>";
+		};
+		E8EE63FF28C6EDA30043678B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE640028C6EE040043678B /* Instantiatable.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		E8FF6E5B28BCEF3C0071DB37 /* Utils */ = {
@@ -218,6 +235,7 @@
 				E8A9D8D128BB64C300ADD016 /* LaunchScreen.storyboard in Resources */,
 				E8A9D8E028BB736000ADD016 /* GoogleService-Info.plist in Resources */,
 				E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */,
+				E8EE63FC28C6ED600043678B /* PostRegistration.storyboard in Resources */,
 				E8A9D8CC28BB64BF00ADD016 /* PostList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A9D8C928BB64BF00ADD016 /* PostListViewController.swift in Sources */,
+				E8EE63FE28C6ED820043678B /* PostRegistrationViewController.swift in Sources */,
+				E8EE640128C6EE040043678B /* Instantiatable.swift in Sources */,
 				E8A9D8C528BB64BF00ADD016 /* AppDelegate.swift in Sources */,
 				E8A9D8C728BB64BF00ADD016 /* SceneDelegate.swift in Sources */,
 				E8FF6E5D28BCEF4B0071DB37 /* Logger+.swift in Sources */,
