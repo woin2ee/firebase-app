@@ -26,6 +26,7 @@ final class RootTabBarController: UITabBarController {
             image: UIImage.init(systemName: "line.3.horizontal"),
             tag: 0
         )
+        let postsNC = UINavigationController.init(rootViewController: postListVC)
         
         let userInfoVC = UserInfoViewController.instantiate(storyboardName: "UserInfo")
         userInfoVC.tabBarItem = .init(
@@ -33,7 +34,8 @@ final class RootTabBarController: UITabBarController {
             image: UIImage.init(systemName: "person"),
             tag: 1
         )
+        let userNC = UINavigationController.init(rootViewController: userInfoVC)
         
-        self.viewControllers = [postListVC, userInfoVC]
+        self.viewControllers = [postsNC, userNC]
     }
 }
