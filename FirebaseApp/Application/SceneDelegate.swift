@@ -18,9 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow.init(windowScene: windowScene)
         self.tabBarController = .init()
         
-        let mainViewController = MainViewController.create()
+        let postListVC = PostListViewController.create()
         
-        self.tabBarController?.setViewControllers([mainViewController], animated: false)
+        self.tabBarController?.setViewControllers([postListVC], animated: false)
         
         self.window?.rootViewController = self.tabBarController
         self.window?.makeKeyAndVisible()

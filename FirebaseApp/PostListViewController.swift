@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  PostListViewController.swift
 //  FirebaseApp
 //
 //  Created by Jaewon on 2022/08/28.
@@ -8,12 +8,12 @@
 import UIKit
 import FirebaseDatabase
 
-final class MainViewController: UIViewController {
+final class PostListViewController: UIViewController {
     
-    static func create() -> MainViewController {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+    static func create() -> PostListViewController {
+        let storyboard = UIStoryboard.init(name: "PostList", bundle: nil)
         let identifier = String.init(describing: Self.self)
-        return storyboard.instantiateViewController(withIdentifier: identifier) as! MainViewController
+        return storyboard.instantiateViewController(withIdentifier: identifier) as! PostListViewController
     }
     
     override func viewDidLoad() {
