@@ -35,6 +35,7 @@ final class RootTabBarController: UITabBarController {
             tag: 1
         )
         let userNC = UINavigationController.init(rootViewController: userInfoVC)
+        userNC.isNavigationBarHidden = true
         
         self.viewControllers = [postsNC, userNC]
     }

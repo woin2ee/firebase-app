@@ -6,18 +6,37 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 final class PostListViewController: UIViewController, Instantiatable {
     
+    let dataBaseRepository = FirebaseDatabaseRepository.init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavigationBar()
     }
     
-    @IBAction func didTapAddDataButton(_ sender: UIButton) {
-        let url = "https://fir-app-c82de-default-rtdb.asia-southeast1.firebasedatabase.app"
-        let ref = Database.database(url: url).reference()
-        ref.child("users").setValue(["name": "James"])
-//        ref.child("users").child("name").setValue("Bob")
+    private func configureNavigationBar() {
+        let addButton: UIBarButtonItem = {
+            let button = UIBarButtonItem.init(systemItem: .add)
+            button.primaryAction = .init(handler: { _ in
+                self.didTapPostRegisterButton()
+            })
+            return button
+        }()
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+    private func didTapPostRegisterButton() {
+        let postRegistrationAlert = RegistrationAlertController.init(
+            title: "게시물 등록",
+            message: "제목을 입력해주세요."
+        )
+        postRegistrationAlert.addConfirmAction { _ in
+            let postTitle = postRegistrationAlert.textFields?.first?.text ?? ""
+            self.dataBaseRepository.savePost(title: postTitle)
+        }
+        
+        self.present(postRegistrationAlert, animated: true)
     }
 }

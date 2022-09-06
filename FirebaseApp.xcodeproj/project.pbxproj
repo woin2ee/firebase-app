@@ -15,12 +15,15 @@
 		E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CD28BB64C300ADD016 /* Assets.xcassets */; };
 		E8A9D8D128BB64C300ADD016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8CF28BB64C300ADD016 /* LaunchScreen.storyboard */; };
 		E8A9D8E028BB736000ADD016 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */; };
-		E8EE63FE28C6ED820043678B /* PostRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */; };
+		E8EE63FE28C6ED820043678B /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE63FD28C6ED820043678B /* PostDetailViewController.swift */; };
 		E8EE640128C6EE040043678B /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE640028C6EE040043678B /* Instantiatable.swift */; };
-		E8EE641328C7071E0043678B /* PostRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EE641528C7071E0043678B /* PostRegistration.storyboard */; };
+		E8EE641328C7071E0043678B /* PostDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EE641528C7071E0043678B /* PostDetail.storyboard */; };
 		E8EE641C28C708230043678B /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE641B28C708230043678B /* UserInfoViewController.swift */; };
 		E8EE641E28C708310043678B /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EE641D28C708310043678B /* UserInfo.storyboard */; };
 		E8EE642128C708BE0043678B /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE642028C708BE0043678B /* RootTabBarController.swift */; };
+		E8EE642328C71A820043678B /* RegistrationAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE642228C71A820043678B /* RegistrationAlertController.swift */; };
+		E8EE642828C722F80043678B /* FirebaseDatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE642728C722F80043678B /* FirebaseDatabaseRepository.swift */; };
+		E8EE642B28C729800043678B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE642A28C729800043678B /* Post.swift */; };
 		E8FF6E5D28BCEF4B0071DB37 /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,12 +38,15 @@
 		E8A9D8D028BB64C300ADD016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8A9D8D228BB64C300ADD016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FirebaseApp/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRegistrationViewController.swift; sourceTree = "<group>"; };
+		E8EE63FD28C6ED820043678B /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		E8EE640028C6EE040043678B /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
-		E8EE641428C7071E0043678B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PostRegistration.storyboard; sourceTree = "<group>"; };
+		E8EE641428C7071E0043678B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PostDetail.storyboard; sourceTree = "<group>"; };
 		E8EE641B28C708230043678B /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		E8EE641D28C708310043678B /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
 		E8EE642028C708BE0043678B /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		E8EE642228C71A820043678B /* RegistrationAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAlertController.swift; sourceTree = "<group>"; };
+		E8EE642728C722F80043678B /* FirebaseDatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseRepository.swift; sourceTree = "<group>"; };
+		E8EE642A28C729800043678B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E8FF6E5A28BCE40E0071DB37 /* FirebaseApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseApp.entitlements; sourceTree = "<group>"; };
 		E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		F3B01CBFB589C0BF6350F907 /* Pods-FirebaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseApp.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 				E8FF6E5A28BCE40E0071DB37 /* FirebaseApp.entitlements */,
 				E8A9D8DF28BB736000ADD016 /* GoogleService-Info.plist */,
 				E8A9D8DA28BB668D00ADD016 /* Application */,
+				E8EE642628C722BB0043678B /* Data */,
+				E8EE642928C728CE0043678B /* Domain */,
 				E8A9D8D828BB668500ADD016 /* Resources */,
 				E8A9D8D928BB668700ADD016 /* Scenes */,
 				E8FF6E5B28BCEF3C0071DB37 /* Utils */,
@@ -141,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E8EE63F928C6EC630043678B /* PostList */,
-				E8EE63FA28C6EC6B0043678B /* PostRegistration */,
+				E8EE63FA28C6EC6B0043678B /* PostDetail */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -155,13 +163,13 @@
 			path = PostList;
 			sourceTree = "<group>";
 		};
-		E8EE63FA28C6EC6B0043678B /* PostRegistration */ = {
+		E8EE63FA28C6EC6B0043678B /* PostDetail */ = {
 			isa = PBXGroup;
 			children = (
-				E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */,
-				E8EE641528C7071E0043678B /* PostRegistration.storyboard */,
+				E8EE63FD28C6ED820043678B /* PostDetailViewController.swift */,
+				E8EE641528C7071E0043678B /* PostDetail.storyboard */,
 			);
-			path = PostRegistration;
+			path = PostDetail;
 			sourceTree = "<group>";
 		};
 		E8EE63FF28C6EDA30043678B /* Utils */ = {
@@ -185,8 +193,25 @@
 			isa = PBXGroup;
 			children = (
 				E8EE642028C708BE0043678B /* RootTabBarController.swift */,
+				E8EE642228C71A820043678B /* RegistrationAlertController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E8EE642628C722BB0043678B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE642728C722F80043678B /* FirebaseDatabaseRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E8EE642928C728CE0043678B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE642A28C729800043678B /* Post.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		E8FF6E5B28BCEF3C0071DB37 /* Utils */ = {
@@ -260,7 +285,7 @@
 				E8A9D8D128BB64C300ADD016 /* LaunchScreen.storyboard in Resources */,
 				E8A9D8E028BB736000ADD016 /* GoogleService-Info.plist in Resources */,
 				E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */,
-				E8EE641328C7071E0043678B /* PostRegistration.storyboard in Resources */,
+				E8EE641328C7071E0043678B /* PostDetail.storyboard in Resources */,
 				E8A9D8CC28BB64BF00ADD016 /* PostList.storyboard in Resources */,
 				E8EE641E28C708310043678B /* UserInfo.storyboard in Resources */,
 			);
@@ -316,12 +341,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A9D8C928BB64BF00ADD016 /* PostListViewController.swift in Sources */,
+				E8EE642B28C729800043678B /* Post.swift in Sources */,
+				E8EE642328C71A820043678B /* RegistrationAlertController.swift in Sources */,
 				E8EE642128C708BE0043678B /* RootTabBarController.swift in Sources */,
 				E8EE641C28C708230043678B /* UserInfoViewController.swift in Sources */,
-				E8EE63FE28C6ED820043678B /* PostRegistrationViewController.swift in Sources */,
+				E8EE63FE28C6ED820043678B /* PostDetailViewController.swift in Sources */,
 				E8EE640128C6EE040043678B /* Instantiatable.swift in Sources */,
 				E8A9D8C528BB64BF00ADD016 /* AppDelegate.swift in Sources */,
 				E8A9D8C728BB64BF00ADD016 /* SceneDelegate.swift in Sources */,
+				E8EE642828C722F80043678B /* FirebaseDatabaseRepository.swift in Sources */,
 				E8FF6E5D28BCEF4B0071DB37 /* Logger+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,12 +373,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		E8EE641528C7071E0043678B /* PostRegistration.storyboard */ = {
+		E8EE641528C7071E0043678B /* PostDetail.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E8EE641428C7071E0043678B /* Base */,
 			);
-			name = PostRegistration.storyboard;
+			name = PostDetail.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
