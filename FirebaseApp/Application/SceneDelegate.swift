@@ -10,20 +10,15 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var tabBarController: UITabBarController?
+    var rootTabBarController: RootTabBarController?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow.init(windowScene: windowScene)
-        self.tabBarController = .init()
+        self.rootTabBarController = .init()
         
-        let postListVC = PostListViewController.instantiate(storyboardName: "PostList")
-        let postRegistrationVC = PostRegistrationViewController.instantiate(storyboardName: "PostRegistration")
-        
-        self.tabBarController?.setViewControllers([postListVC, postRegistrationVC], animated: false)
-        
-        self.window?.rootViewController = self.tabBarController
+        self.window?.rootViewController = self.rootTabBarController
         self.window?.makeKeyAndVisible()
     }
     

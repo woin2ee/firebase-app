@@ -18,6 +18,9 @@
 		E8EE63FE28C6ED820043678B /* PostRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */; };
 		E8EE640128C6EE040043678B /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE640028C6EE040043678B /* Instantiatable.swift */; };
 		E8EE641328C7071E0043678B /* PostRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EE641528C7071E0043678B /* PostRegistration.storyboard */; };
+		E8EE641C28C708230043678B /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE641B28C708230043678B /* UserInfoViewController.swift */; };
+		E8EE641E28C708310043678B /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EE641D28C708310043678B /* UserInfo.storyboard */; };
+		E8EE642128C708BE0043678B /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE642028C708BE0043678B /* RootTabBarController.swift */; };
 		E8FF6E5D28BCEF4B0071DB37 /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		E8EE63FD28C6ED820043678B /* PostRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRegistrationViewController.swift; sourceTree = "<group>"; };
 		E8EE640028C6EE040043678B /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		E8EE641428C7071E0043678B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PostRegistration.storyboard; sourceTree = "<group>"; };
+		E8EE641B28C708230043678B /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		E8EE641D28C708310043678B /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		E8EE642028C708BE0043678B /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		E8FF6E5A28BCE40E0071DB37 /* FirebaseApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseApp.entitlements; sourceTree = "<group>"; };
 		E8FF6E5C28BCEF4B0071DB37 /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		F3B01CBFB589C0BF6350F907 /* Pods-FirebaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseApp.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +120,9 @@
 		E8A9D8D928BB668700ADD016 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E8EE641F28C7088A0043678B /* Common */,
 				E8A9D8E128BB737600ADD016 /* Posts */,
+				E8EE641A28C707E20043678B /* User */,
 				E8EE63FF28C6EDA30043678B /* Utils */,
 			);
 			path = Scenes;
@@ -162,6 +170,23 @@
 				E8EE640028C6EE040043678B /* Instantiatable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E8EE641A28C707E20043678B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE641B28C708230043678B /* UserInfoViewController.swift */,
+				E8EE641D28C708310043678B /* UserInfo.storyboard */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E8EE641F28C7088A0043678B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE642028C708BE0043678B /* RootTabBarController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E8FF6E5B28BCEF3C0071DB37 /* Utils */ = {
@@ -237,6 +262,7 @@
 				E8A9D8CE28BB64C300ADD016 /* Assets.xcassets in Resources */,
 				E8EE641328C7071E0043678B /* PostRegistration.storyboard in Resources */,
 				E8A9D8CC28BB64BF00ADD016 /* PostList.storyboard in Resources */,
+				E8EE641E28C708310043678B /* UserInfo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A9D8C928BB64BF00ADD016 /* PostListViewController.swift in Sources */,
+				E8EE642128C708BE0043678B /* RootTabBarController.swift in Sources */,
+				E8EE641C28C708230043678B /* UserInfoViewController.swift in Sources */,
 				E8EE63FE28C6ED820043678B /* PostRegistrationViewController.swift in Sources */,
 				E8EE640128C6EE040043678B /* Instantiatable.swift in Sources */,
 				E8A9D8C528BB64BF00ADD016 /* AppDelegate.swift in Sources */,
