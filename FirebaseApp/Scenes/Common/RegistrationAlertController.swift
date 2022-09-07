@@ -36,7 +36,7 @@ final class RegistrationAlertController: UIAlertController {
     
     func addConfirmAction(_ handler: ((UIAlertAction) -> Void)?) {
         let confirmAction = UIAlertAction.init(
-            title: "확인",
+            title: "등록",
             style: .default,
             handler: handler
         )
