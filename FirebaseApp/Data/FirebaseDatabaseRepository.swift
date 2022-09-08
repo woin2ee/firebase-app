@@ -16,7 +16,12 @@ final class FirebaseDatabaseRepository {
     }
     
     func savePost(title: String) {
-        let post: Post = .init(title: title)
-        self.ref.child("posts").child(UUID.init().uuidString).setValue(post.toDictionary)
+        let uuidString: String = UUID.init().uuidString
+        let post: Post = .init(uuid: uuidString, title: title)
+        self.ref.child("posts").childByAutoId().setValue(post.toDictionary)
+    }
+    
+    func observePosts(with block: @escaping (DataSnapshot) -> Void) -> UInt {
+        self.ref.child("posts").observe(.value, with: block)
     }
 }

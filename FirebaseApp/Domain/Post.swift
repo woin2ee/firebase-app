@@ -7,11 +7,16 @@
 
 import Foundation
 
-struct Post {
+struct Post: Codable {
+    let uuid: String
     let title: String
     var contents: String = ""
     
     var toDictionary: [String: Any] {
-        ["title": title, "contents": contents]
+        [
+            "uuid" : uuid,
+            "title" : title,
+            "contents" : contents
+        ]
     }
 }
