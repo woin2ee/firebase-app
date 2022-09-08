@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 import FirebaseDatabase
 
 final class PostListViewController: UIViewController, Instantiatable {
@@ -28,18 +29,19 @@ final class PostListViewController: UIViewController, Instantiatable {
         
         self.handles.insert(
             self.dataBaseRepository.observePosts(with: { snapshot in
-                guard let postsDict = snapshot.value as? [String : [String : String]] else { return }
-
-                let posts = postsDict.compactMap { key, value -> Post? in
-                    guard
-                        let uuid = value["uuid"],
-                        let title = value["title"]
-                    else { return nil }
-                    return .init(uuid: uuid, title: title)
-                }
+                guard let value = snapshot.value as? [String : Any] else { return }
                 
-                self.posts = posts
-                self.postListTableView.reloadData()
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: value)
+                    let postsData = try JSONDecoder.init().decode([String : Post].self, from: jsonData)
+                    
+                    self.posts = Array(postsData.values)
+                    DispatchQueue.main.async {
+                        self.postListTableView.reloadData()
+                    }
+                } catch {
+                    Logger.firebase.error("Json 파싱 실패")
+                }
             })
         )
     }
