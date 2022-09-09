@@ -83,7 +83,7 @@ extension PostListViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "")
         
         var config = cell.defaultContentConfiguration()
-        config.text = self.posts[indexPath.row].title
+        config.text = self.posts.sorted(by: { $0.date < $1.date })[indexPath.row].title
         cell.contentConfiguration = config
         
         return cell

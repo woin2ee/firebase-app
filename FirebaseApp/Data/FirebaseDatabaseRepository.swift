@@ -17,7 +17,9 @@ final class FirebaseDatabaseRepository {
     
     func savePost(title: String) {
         let uuidString: String = UUID.init().uuidString
-        let post: Post = .init(uuid: uuidString, title: title)
+        let time = UInt(Date.init().timeIntervalSince1970)
+        let post: Post = .init(uuid: uuidString, title: title, date: time)
+        
         self.ref.child("posts").childByAutoId().setValue(post.toDictionary)
     }
     

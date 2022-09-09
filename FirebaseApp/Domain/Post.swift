@@ -11,12 +11,14 @@ struct Post: Codable {
     let uuid: String
     let title: String
     var contents: String = ""
+    let date: UInt
     
     var toDictionary: [String: Any] {
         [
             "uuid" : uuid,
             "title" : title,
-            "contents" : contents
+            "contents" : contents,
+            "date" : date
         ]
     }
 }
